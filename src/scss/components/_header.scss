@@ -1,0 +1,53 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.header {
+    position: fixed;
+    z-index: 10;
+    opacity: 1;
+    width: 100%;
+    height: 64px;
+    padding: 10px 0px 10px 16px;
+    margin: 0;
+    background: v.$color-bg-main;
+    border-bottom: 2px solid v.$color-green;
+    @include u.flex(space-between, center);
+    @include u.media('tablet-wide') {
+        height: 80px;
+        padding: 18px 0px 18px 40px;
+    };
+    &__wrapper {
+        width: 100%;
+        height: 64px;
+        padding-right: 16px;
+        border-right: 2px solid v.$color-green;
+        @include u.flex(space-between, center);
+        @include u.media('tablet-wide') {
+            padding-right: 40px;
+            height: 80px;
+        };
+    }
+    &__logo {
+        width: 116px;
+        height: 24px;
+        cursor: pointer;
+    }
+    &__img {
+        width: 116px;
+        height: 24px;
+    }
+    &__menu {
+        width: 100%;
+        width: 64px;
+        height: 64px;
+        @include u.media('tablet-wide') {
+            width: 116px;
+            height: 80px;
+        };
+    }
+    &__card {
+        width: 100vw;
+        min-height: 100vh;
+        z-index: 10;
+    }
+}

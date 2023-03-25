@@ -1,0 +1,131 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.hero {
+    position: relative;
+    padding: 112px 16px 0px 16px;
+    @include u.media('tablet-wide') {
+        padding: 160px 64px 0px 64px;
+    };
+    &__wrapper {
+        @include u.flex(flex-start, center, column);
+        text-align: center;
+        margin-bottom: 36px;
+        @include u.media('tablet-wide') {
+            margin-bottom: 80px;
+        };
+    }
+    &__title {
+        width: 100%;
+        max-width: 284px;
+        margin-bottom: 24px;
+        @include u.media('tablet-wide') {
+            max-width: 834px;
+            margin-bottom: 48px;
+        };
+    }
+    &__subtitle {
+        width: 100%;
+        max-width: 307px;
+        @include u.media('tablet-wide') {
+            max-width: 593px;
+        };
+    }
+    &__images {
+        @include u.flex(flex-start, center, column);
+    }
+    &__main-img {
+        width: 300px;
+        height: 200px;
+        align-self: center;
+        z-index: 5;
+        @include u.media('phone-wide') {
+            width: 336px;
+            height: 264px;
+        };
+        @include u.media('tablet-small') {
+            width: 400px;
+            height: 334px;
+        };
+        @include u.media('tablet-medium') {
+            width: 600px;
+            height: 476px;
+        };
+        @include u.media('tablet-wide') {
+            width: 744px;
+            height: 586px;
+        };
+    }
+    &__gray-coin {
+        position: absolute;
+        z-index: -1;
+        left: 0px;
+        top: 406px;
+        width: 170px;
+        height: 240px;
+        @include u.media('phone-wide') {
+            top: 416px;
+            width: 198px;
+            height: 302px;
+        };
+        @include u.media('tablet-small') {
+            top: 426px;
+            width: 230px;
+            height: 334px;
+        };
+        @include u.media('tablet-medium') {
+            top: 440px;
+            width: 330px;
+            height: 456px;
+        };
+        @include u.media('tablet-wide') {
+            top: 900px;
+            width: 198px;
+            height: 302px;
+        };
+    }
+    &__greencoin-mb {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        right: 0px;
+        top: 256px;
+        width: 190px;
+        height: 302px;
+        @include u.media('tablet-wide') {
+            display: none;
+        };
+        @include u.media('phone-wide') {
+            top: 240px;
+            width: 198px;
+            height: 352px;
+        };
+        @include u.media('tablet-small') {
+            top: 236px;
+            width: 206px;
+            height: 368px;
+        };
+        @include u.media('tablet') {
+            top: 230px;
+            width: 226px;
+            height: 400px;
+        };
+        @include u.media('tablet-medium') {
+            top: 178px;
+            width: 280px;
+            height: 500px;
+        };
+    }
+    &__green-coin {
+        display: none;
+        @include u.media('tablet-wide') {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 370px;
+            right: 0px;
+            width: 282px;
+            height: 302px;
+        };
+    }
+}

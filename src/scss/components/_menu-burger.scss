@@ -1,0 +1,83 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+
+.menu {
+    position: relative;
+    height: 62px;
+    @include u.flex(center, center);
+    transition: background-color 0.5s ease-in-out;
+    @include u.media('tablet-wide') {
+        height: 78px;
+    };
+    &__burger {
+        width: 24px;
+        height: 24px;
+        background: inherit;
+        padding: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        animation: fadein 0.5s;
+    }
+    &__close {
+        width: 24px;
+        height: 24px;
+        background: inherit;
+        padding: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: none;
+        animation: fadein 0.5s;
+    }
+}
+
+.menu-card {
+    position: fixed;
+    top: 64px;
+    left: 0px;
+    padding: 16px 0px;
+    background: v.$color-bg-main;
+    @include u.flex(flex-start, flex-start, column);
+    display: none;
+    animation: fadein 0.7s;
+    @include u.media('phone-wide') {
+        padding: 24px 0px;
+    };
+    @include u.media('tablet-wide') {
+        top: 80px;
+    };
+    &__item {
+        width: 100%;
+        border-bottom: 1px solid v.$color-black-3;
+        @include u.flex(flex-start, center);
+        padding: 8px 16px;
+        @include u.media('phone-wide') {
+            padding: 16px;
+        };
+        @include u.media('tablet-medium') {
+            padding: 16px 64px;
+        };
+    }
+    &__link {
+        @include u.text(u.rem(24), 400, v.$color-white, 150%, v.$primary-font);
+        text-decoration: none;
+    }
+    &__media {
+        width: 100%;
+        padding: 16px;
+        border-bottom: 1px solid v.$color-black-3;
+        @include u.flex(flex-start, center);
+        gap: 24px;
+        @include u.media('tablet-medium') {
+            padding: 16px 64px 28px 64px;
+        };
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

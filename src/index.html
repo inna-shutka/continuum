@@ -8,6 +8,65 @@
     <link rel="stylesheet" href="./scss/style.scss">
 </head>
 <body>
-    
+    <header class="header container">
+        <div class="header__wrapper">
+            <a class="header__logo logo" href="#">
+                <img class="header__img logo__img" src="./assets/svg/logo-header.svg" alt="Continuum">
+            </a>
+            <button class="header__button button">Sign in</button>
+        </div>
+        <div class="header__menu menu" id="menu-container">
+            <button class="menu__burger" id="menu-burger">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 18H22M2 12H22M2 6H22" stroke="#F4EEEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="menu__close" id="menu-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 6.70711C19.0976 6.31658 19.0976 5.68342 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929C4.90237 17.6834 4.90237 18.3166 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711Z" fill="#F4EEEA"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header__card menu-card" id="menu-card">
+            <div class="menu-card__item"><a class="menu-card__link" href="#">About</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Courses</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Leaderboard</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Whitepaper</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Blog</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Privacy Policy</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Terms of Use</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Contact Support</a></div>
+            <div class="menu-card__media">
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-facebook-menu.svg" alt="Facebook">
+                </a>
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-instagram-menu.svg" alt="Instagram">
+                </a>
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-linkedin-menu.svg" alt="Linkedin">
+                </a>
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-pinterest-menu.svg" alt="Pinterest">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <div class="hero__wrapper">
+            <h1 class="hero__title title">Get paid to learn.</h1>
+            <h2 class="hero__subtitle subtitle">Short-form video and carousel content that earns rewards and NFTs.</h2>
+        </div>
+        <div class="hero__images">
+            <img class="hero__main-img" src="/src/assets/svg/hero-main.svg" alt="image-card">
+            <img class="hero__gray-coin" src="/src/assets/images/gray-coin.png" alt="image-gray-coin">
+            <img class="hero__greencoin-mb" src="/src/assets/images/green-coin-mobile.png" alt="image-greeny-coin-mobile">
+            <img class="hero__green-coin" src="/src/assets/images/green-coin.png" alt="image-greeny-coin">
+        </div>
+    </section>
+
+
+    <script src="index.js"></script>
 </body>
 </html>
