@@ -1,0 +1,96 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.card-course {
+    width: 100%;
+    width: 344px;
+    height: 332px;
+    background-color: v.$color-black-1;
+    border: 1px solid v.$color-grey;
+    border-radius: 8px;
+    cursor: pointer;
+    @include u.flex(flex-start, flex-start, column);
+    @include u.media('tablet-wide') {
+        width: 396px;
+    };
+    &__image {
+        align-self: stretch;
+        width: 100%;
+        height: 140px;
+        border-top-right-radius: 6.8px;
+        border-top-left-radius: 6.8px;
+    }
+    &__img {
+        width: 100%;
+        height: 140px;
+        border-top-right-radius: 6.8px;
+        border-top-left-radius: 6.8px;
+    }
+    &__subtitle {
+        width: 100%;
+        padding: 16px;
+        @include u.flex(flex-start, center);
+        gap: 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 115%;
+        color: v.$color-grey;
+    }
+    &__title {
+        padding: 0px 16px 32px 16px;
+        @include u.flex(flex-start, center);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 115%;
+        color: v.$color-white-2;
+    }
+    &__info {
+        width: 312px;
+        height: 68px;
+        padding: 16px;
+        margin: 0px 16px 16px 16px;
+        background-color: v.$color-black-2;
+        border-radius: 4px;
+        @include u.flex(center, center);
+        text-align: center;
+        @include u.media('tablet-wide') {
+            width: 364px;
+        };
+    }
+    &__rewards {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 115%;
+        color: v.$color-white-2;
+        margin-right: 14px;
+    }
+    &__divider {
+        display: block;
+        width: 1px;
+        height: 24px;
+        background-color: v.$color-grey;
+        margin-right: 40px;
+    }
+    &__nft-info {
+        @include u.flex(center, flex-start, column);
+        gap: 4px;
+        &:not(:last-child) {
+            margin-right: 32px;
+            @include u.media('tablet-wide') {
+                margin-right: 56px;
+            };
+        }
+    }
+    &__nft {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        color: v.$color-grey;
+    }
+    &__quantity {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 115%;
+        color: v.$color-white-2;
+    }
+}

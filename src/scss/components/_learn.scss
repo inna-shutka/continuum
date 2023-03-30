@@ -1,0 +1,182 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.learn {
+    background: v.$color-gradient;
+    height: 100%;
+    &__wrapper {
+        position: relative;
+        padding: 56px 16px 0px 16px;
+        @include u.flex(flex-start, center, column);
+        @include u.media('tablet-medium') {
+            padding: 80px 64px 0px 64px;
+        };
+        @include u.media('tablet-wide') {
+            padding: 50px 64px 0px 64px;
+        };
+    }
+    &__information {
+        width: 390px;
+        align-self: flex-start;
+        @include u.media('tablet-medium') {
+            align-self: flex-end;
+            margin-right: 160px;
+        };
+        @include u.media('desktop') {
+            width: 400px;
+        };
+        @include u.media('desktop-wide') {
+            margin-right: 200px;
+        }
+    }
+    &__info {
+        @include u.text(u.rem(20), 400, v.$color-white-2, 150%, v.$primary-font);
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            @include u.media('tablet-wide') {
+                margin-bottom: 24px;
+            };
+        }
+    }
+    &__green {
+        color: v.$color-green;
+    }
+    &__imageOne {
+        display: none;
+        @include u.media('tablet-medium') {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            width: 224px;
+            height: 480px;
+            top: 80px;
+            right: 0px;
+        };
+        @include u.media('tablet-wide') {
+            width: 224px;
+            height: 500px;
+            top: 0px;
+        };
+        @include u.media('desktop') {
+            width: 224px;
+            height: 520px;
+            top: 0px;
+        };
+        @include u.media('desktop-wide') {
+            width: 264px;
+            height: 520px;
+            top: 0px;
+        };
+    }
+    &__imageTwo {
+        display: none;
+        @include u.media('tablet-medium') {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 100px;
+            height: 126px;
+            top: 230px;
+            right: 186px;
+        };
+        @include u.media('tablet-wide') {
+            width: 115px;
+            height: 135px;
+            top: 196px;
+            right: 188px;
+        };
+        @include u.media('desktop-wide') {
+            width: 150px;
+            height: 176px;
+            top: 226px;
+            right: 220px;
+        };
+    }
+    &__industry {
+        padding: 80px 16px 80px 16px;
+        @include u.flex(center, center, column);
+        align-self: center;
+        @include u.media('tablet-medium') {
+            padding: 240px 64px 236px 64px;
+        };
+        @include u.media('tablet-wide') {
+            padding: 170px 64px 236px 64px;
+        };
+    }
+    &__title-wrapper {
+        @include u.flex(center, center);
+        gap: 40px;
+        margin-bottom: 40px;
+        align-self: center;
+        @include u.media('tablet-wide') {
+            gap: 8px;
+        };
+    }
+    &__title {
+        max-width: 146px;
+        @include u.media('tablet-wide') {
+            max-width: 368px;
+        };
+    }
+    &__title-image {
+        width: 82px;
+        height: 82px;
+        align-self: flex-end;
+        @include u.media('tablet-wide') {
+            width: 102px;
+            height: 92px;
+        };
+    }
+    &__items-wrapper {
+        @include u.flex(center, center, row, wrap);
+        gap: 8px;
+        @include u.media('desktop') {
+            max-width: 1238px;
+            gap: 24px;
+        };
+    }
+    &__item {
+        width: 300px;
+        background-color: v.$color-black-1;
+        border-radius: 8px;
+        @include u.flex(flex-start, center);
+        gap: 16px;
+        @include u.media('tablet-medium') {
+            width: 344px;
+        };
+        @include u.media('desktop') {
+            width: 607px;
+        };
+    }
+    &__avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 8px;
+        @include u.media('desktop') {
+            width: 120px;
+            height: 120px;
+        };
+    }
+    &__avt {
+        width: 96px;
+        height: 96px;
+        border-radius: 8px;
+        @include u.media('desktop') {
+            width: 120px;
+            height: 120px;
+        };
+    }
+    &__person {
+        @include u.flex(flex-start, flex-start, column);
+        gap: 8px;
+        @include u.media('desktop') {
+            gap: 16px;
+        };
+    }
+    &__person-name {
+        @include u.text(u.rem(18), 700, v.$color-white-2, 115%, v.$primary-font);
+    }
+    &__person-text {
+        @include u.text(u.rem(14), 400, v.$color-white-2, 115%, v.$primary-font);
+    }
+}

@@ -1,0 +1,63 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.course {
+    overflow: hidden;
+    &__card {
+        animation: fadein 2s;
+        &:not(:first-child) {
+            display: none;
+            @include u.media('tablet-medium') {
+                display: flex;
+            };
+        }
+    }
+    &__slider {
+        width: 100%;
+        @include u.flex(center, center);
+        gap: 10px;
+        margin-top: 40px;
+        @include u.media('tablet-medium') {
+            display: none;
+        };
+    }
+    &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: v.$color-black-3;
+    border-radius: 50%;
+    cursor: pointer;
+    @include u.media('tablet-medium') {
+        display: none;
+    };
+    }
+};
+
+.course__slider.first-current #dot1 {
+    background-color: v.$color-white-2;
+};
+
+.course__slider.second-current #dot2 {
+    background-color: v.$color-white-2;
+};
+
+.course__slider.third-current #dot3 {
+    background-color: v.$color-white-2;
+};
+
+.course__slider.fourth-current #dot4 {
+    background-color: v.$color-white-2;
+};
+
+.course__slider.fifth-current #dot5 {
+    background-color: v.$color-white-2;
+};
+
+.course__slider.sixth-current #dot6 {
+    background-color: v.$color-white-2;
+};
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

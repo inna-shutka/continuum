@@ -57,7 +57,7 @@
         @include u.media('phone-wide') {
             padding: 16px;
         };
-        @include u.media('tablet-medium') {
+        @include u.media('tablet-wide') {
             padding: 16px 64px;
         };
     }
@@ -71,7 +71,7 @@
         border-bottom: 1px solid v.$color-black-3;
         @include u.flex(flex-start, center);
         gap: 24px;
-        @include u.media('tablet-medium') {
+        @include u.media('tablet-wide') {
             padding: 16px 64px 28px 64px;
         };
     }
