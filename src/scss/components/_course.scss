@@ -5,9 +5,6 @@
     max-width: 1366px;
     padding: 190px 16px 0px 16px;
     @include u.flex(center, center, column);
-    @include u.media('tablet-medium') {
-        @include u.flex(flex-start, flex-start, column);
-    };
     @include u.media('tablet-wide') {
         padding: 222px 64px 0px 64px;
     };
@@ -19,8 +16,5 @@
         max-width: 1236px;
         @include u.flex(center, center, row, wrap);
         gap: 24px;
-        @include u.media('tablet-medium') {
-            @include u.flex(stretch, center, row, wrap);
-        };
     }
 }

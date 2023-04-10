@@ -2,28 +2,23 @@
 @use '../config/variables' as v;
 
 .learn {
+    width: 100%;
     background: v.$color-gradient;
     height: 100%;
+    padding: 56px 16px 0px 16px;
+    @include u.media('tablet-medium') {
+        padding: 80px 64px 0px 64px;
+    };
     &__wrapper {
-        position: relative;
-        padding: 56px 16px 0px 16px;
-        @include u.flex(flex-start, center, column);
-        @include u.media('tablet-medium') {
-            padding: 80px 64px 0px 64px;
-        };
-        @include u.media('tablet-wide') {
-            padding: 50px 64px 0px 64px;
-        };
+        width: 100%;
+        max-width: 736px;
+        @include u.flex(flex-start, flex-start, column);
     }
     &__information {
-        width: 390px;
-        align-self: flex-start;
         @include u.media('tablet-medium') {
+            max-width: 400px;
             align-self: flex-end;
             margin-right: 160px;
-        };
-        @include u.media('desktop') {
-            width: 400px;
         };
         @include u.media('desktop-wide') {
             margin-right: 200px;
@@ -93,88 +88,86 @@
         };
     }
     &__industry {
-        padding: 80px 16px 80px 16px;
-        @include u.flex(center, center, column);
-        align-self: center;
+        padding: 80px 0px;
+        @include u.flex(flex-start, flex-start, column);
         @include u.media('tablet-medium') {
-            padding: 240px 64px 236px 64px;
+            padding: 240px 0px 236px 0px;
         };
         @include u.media('tablet-wide') {
-            padding: 170px 64px 236px 64px;
+            padding: 170px 0px 236px 0px;
         };
     }
     &__title-wrapper {
-        @include u.flex(center, center);
+        @include u.flex(center, flex-end);
         gap: 40px;
         margin-bottom: 40px;
-        align-self: center;
-        @include u.media('tablet-wide') {
+        @include u.media('tablet') {
             gap: 8px;
+            align-self: center;
         };
     }
     &__title {
         max-width: 146px;
-        @include u.media('tablet-wide') {
+        @include u.media('tablet') {
             max-width: 368px;
         };
     }
     &__title-image {
         width: 82px;
         height: 82px;
-        align-self: flex-end;
         @include u.media('tablet-wide') {
             width: 102px;
             height: 92px;
         };
     }
+    &__title-img {
+        width: inherit;
+        height: inherit;
+    }
     &__items-wrapper {
-        @include u.flex(center, center, row, wrap);
+        width: 100%;
+        max-width: 1238px;
+        @include u.flex(center, flex-start, row, wrap);
         gap: 8px;
-        @include u.media('desktop') {
-            max-width: 1238px;
+        @include u.media('tablet') {
             gap: 24px;
+            align-self: center;
         };
     }
     &__item {
-        width: 300px;
+        width: 100%;
+        max-width: 606px;
+        height: fit-content;
         background-color: v.$color-black-1;
         border-radius: 8px;
-        @include u.flex(flex-start, center);
-        gap: 16px;
-        @include u.media('tablet-medium') {
-            width: 344px;
-        };
-        @include u.media('desktop') {
-            width: 607px;
-        };
+        @include u.flex(flex-start, stretch);
     }
     &__avatar {
         width: 96px;
         height: 96px;
-        border-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
         @include u.media('desktop') {
             width: 120px;
             height: 120px;
         };
     }
     &__avt {
-        width: 96px;
-        height: 96px;
-        border-radius: 8px;
-        @include u.media('desktop') {
-            width: 120px;
-            height: 120px;
-        };
+        width: inherit;
+        height: inherit;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
     }
     &__person {
         @include u.flex(flex-start, flex-start, column);
-        gap: 8px;
-        @include u.media('desktop') {
-            gap: 16px;
-        };
+        padding: 16px 16px 3px 16px;
     }
     &__person-name {
         @include u.text(u.rem(18), 700, v.$color-white-2, 115%, v.$primary-font);
+        margin-bottom: 8px;
+        @include u.media('desktop') {
+            margin-bottom: 16px;
+        };
     }
     &__person-text {
         @include u.text(u.rem(14), 400, v.$color-white-2, 115%, v.$primary-font);

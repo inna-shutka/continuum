@@ -5,9 +5,6 @@
     max-width: 1366px;
     padding: 171px 16px 0px 16px;
     @include u.flex(flex-start, flex-start, column);
-    @include u.media('tablet-medium') {
-        position: relative;
-    };
     @include u.media('tablet-wide') {
         padding: 160px 64px 0px 64px;
     };
@@ -17,23 +14,30 @@
             margin-bottom: 40px;
         };
     }
-    &__info {
-        width: 344px;
+    &__wrapper-info {
         @include u.flex(flex-start, flex-start, column);
-        align-self: flex-start;
         @include u.media('tablet-medium') {
-            position: relative;
+            @include u.flex(space-between, flex-start, row-reverse);
+        };
+    }
+    &__info {
+        width: 100%;
+        max-width: 736px;
+        @include u.flex(flex-start, flex-start, column);
+        margin-bottom: 56px;
+        @include u.media('tablet-medium') {
             align-self: flex-end;
+            margin-bottom: 0px;
         };
         @include u.media('tablet-wide') {
-            width: 380px;
+            max-width: 380px;
         };
         @include u.media('desktop') {
             margin-right: 26px;
         };
         @include u.media('desktop-wide') {
             margin-right: 104px;
-            width: 400px;
+            max-width: 400px;
         };
     }
     &__text {
@@ -45,49 +49,49 @@
             };
         }
     }
-    &__icon {
-        position: absolute;
-        display: none;
-        z-index: 2;
-        width: 102px;
-        height: 92px;
-        @include u.media('tablet-medium') {
-            display: block;
-            left: -114px;
-            top: 224px;
-        };
-        @include u.media('tablet-wide') {
-            left: -126px;
-            top: 200px;
-        };
-        @include u.media('desktop-wide') {
-            left: -114px;
-            top: 200px;
-        };
-    }
     &__image {
         @include u.flex(center, center);
         width: 286px;
         height: 294px;
         @include u.media('tablet-medium') {
-            position: absolute;
-            z-index: -1;
             width: 330px;
             height: 336px;
-            top: 248px;
         };
         @include u.media('tablet-wide') {
             width: 360px;
             height: 358px;
-            left: 64px;
         };
         @include u.media('desktop') {
             width: 456px;
             height: 403px;
         };
         @include u.media('desktop-wide') {
-            width: 556px;
+            width: 554px;
             height: 503px;
         };
     }
+    &__img {
+        width: inherit;
+        height: inherit;
+    }
+    // &__icon {
+    //     display: none;
+    //     @include u.media('tablet-medium') {
+    //         display: block;
+    //         position: absolute;
+    //         z-index: 1;
+    //         width: 102px;
+    //         height: 92px;
+    //         left: -114px;
+    //         top: 224px;
+    //     };
+    //     @include u.media('tablet-wide') {
+    //         left: -126px;
+    //         top: 200px;
+    //     };
+    //     @include u.media('desktop-wide') {
+    //         left: -114px;
+    //         top: 200px;
+    //     };
+    // }
 }
