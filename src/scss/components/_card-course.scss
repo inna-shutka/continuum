@@ -17,6 +17,9 @@
     @include u.media('tablet-wide') {
         width: 396px;
     };
+    &:hover {
+        transform: scale(1.01);
+    }
     &__image {
         align-self: stretch;
         width: 100%;

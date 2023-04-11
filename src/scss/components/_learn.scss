@@ -2,26 +2,39 @@
 @use '../config/variables' as v;
 
 .learn {
+    position: relative;
     width: 100%;
     background: v.$color-gradient;
     height: 100%;
     padding: 56px 16px 0px 16px;
     @include u.media('tablet-medium') {
-        padding: 80px 64px 0px 64px;
+        padding: 0px 64px;
+        overflow-x: hidden;
     };
     &__wrapper {
         width: 100%;
         max-width: 736px;
         @include u.flex(flex-start, flex-start, column);
+        @include u.media('tablet-medium') {
+            // @include u.flex(flex-end, flex-start);
+            @include u.flex(flex-start, flex-end, column);
+        };
     }
     &__information {
         @include u.media('tablet-medium') {
             max-width: 400px;
-            align-self: flex-end;
             margin-right: 160px;
         };
+        @include u.media('tablet-wide') {
+            margin-right: 0px;
+        };
+        @include u.media('desktop') {
+            margin-right: -140px;
+        }
         @include u.media('desktop-wide') {
-            margin-right: 200px;
+            position: absolute;
+            top: 0px;
+            right: 500px;
         }
     }
     &__info {
@@ -43,25 +56,29 @@
             z-index: 1;
             display: block;
             width: 224px;
-            height: 480px;
-            top: 80px;
+            height: 466px;
+            top: -30px;
             right: 0px;
         };
         @include u.media('tablet-wide') {
             width: 224px;
             height: 500px;
-            top: 0px;
+            top: -38px;
         };
         @include u.media('desktop') {
             width: 224px;
             height: 520px;
-            top: 0px;
+            top: -48px;
         };
         @include u.media('desktop-wide') {
             width: 264px;
             height: 520px;
-            top: 0px;
+            top: -14px;
         };
+    }
+    &__imgOne {
+        width: inherit;
+        height: inherit;
     }
     &__imageTwo {
         display: none;
@@ -71,30 +88,38 @@
             display: block;
             width: 100px;
             height: 126px;
-            top: 230px;
-            right: 186px;
+            top: 150px;
+            right: 192px;
         };
         @include u.media('tablet-wide') {
             width: 115px;
             height: 135px;
-            top: 196px;
-            right: 188px;
+            top: 168px;
+        };
+        @include u.media('desktop') {
+            width: 150px;
+            height: 176px;
+            top: 174px;
         };
         @include u.media('desktop-wide') {
             width: 150px;
             height: 176px;
-            top: 226px;
+            top: 154px;
             right: 220px;
         };
+    }
+    &__imgTwo {
+        width: inherit;
+        height: inherit;
     }
     &__industry {
         padding: 80px 0px;
         @include u.flex(flex-start, flex-start, column);
         @include u.media('tablet-medium') {
-            padding: 240px 0px 236px 0px;
+            padding: 260px 0px 236px 0px;
         };
-        @include u.media('tablet-wide') {
-            padding: 170px 0px 236px 0px;
+        @include u.media('desktop-wide') {
+            padding: 500px 0px 236px 0px;
         };
     }
     &__title-wrapper {
@@ -141,6 +166,9 @@
         background-color: v.$color-black-1;
         border-radius: 8px;
         @include u.flex(flex-start, stretch);
+        &:hover {
+            transform: scale(1.01);
+        }
     }
     &__avatar {
         width: 96px;
