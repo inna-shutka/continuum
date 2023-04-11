@@ -1,0 +1,79 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.use {
+    position: relative;
+    max-width: 1366px;
+    padding: 107px 16px 50px 16px;
+    @include u.flex(flex-start, flex-start, column);
+    @include u.media('tablet-wide') {
+        padding: 171px 64px 160px 64px;
+    };
+    &__image-wrapper {
+        @include u.flex(flex-end, flex-start);
+        align-self: flex-end;
+        margin-bottom: 40px;
+        @include u.media('tablet-medium') {
+            margin-bottom: 0px;
+        };
+    }
+    &__coin-image {
+        position: absolute;
+        z-index: -1;
+        width: 246px;
+        height: 248px;
+        top: 22px;
+        left: -46px;
+        @include u.media('tablet-medium') {
+            z-index: 1;
+            width: 300px;
+            height: 302px;
+            top: -104px;
+            left: 33%;
+        };
+        @include u.media('tablet-wide') {
+            left: 38%;
+        };
+        @include u.media('desktop') {
+            left: 41%;
+        };
+        @include u.media('desktop-wide') {
+            left: 42%;
+        };
+    }
+    &__coin-img {
+        width: inherit;
+        height: inherit;
+    }
+    &__title-wrapper {
+        @include u.flex(flex-start, flex-end, column);
+    }
+    &__title {
+        max-width: 304px;
+        text-align: end;
+    }
+    &__arrow-image {
+        width: 96px;
+        height: 96px;
+    }
+    &__arrow-img {
+        width: inherit;
+        height: inherit;
+    }
+    &__info-block {
+        width: 100%;
+        max-width: 696px;
+        @include u.flex(flex-start, flex-start, column);
+        gap: 32px;
+    }
+    &__info-item {
+        @include u.flex(flex-start, flex-start, column);
+        gap: 16px;
+        @include u.text(u.rem(20), 400, v.$color-white-2, 150%, v.$primary-font);
+        @include u.media('tablet-medium') {
+            @include u.flex(flex-start, flex-start);
+            gap: 40px;
+            @include u.text(u.rem(24), 400, v.$color-white-2, 150%, v.$primary-font);
+        };
+    }
+}
