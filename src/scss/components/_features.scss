@@ -1,0 +1,31 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.features {
+    width: 100%;
+    background-color: v.$color-white-2;
+    padding: 64px 16px 28px 16px;
+    @include u.flex(center,center);
+    overflow: hidden;
+        @include u.media('tablet-wide') {
+            padding: 160px 64px 160px 64px;
+        };
+    &__wrapper {
+        width: 100%;
+        max-width: 1366px;
+        @include u.flex(flex-start, center, column);
+        overflow: hidden;
+    }
+    &__title {
+        width: 100%;
+        max-width: 348px;
+        color: v.$color-bg-main;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__slider {
+        width: 100%;
+        max-width: 1090px;
+        @include u.flex(flex-start, flex-start);
+    }
+}

@@ -16,7 +16,6 @@
         max-width: 736px;
         @include u.flex(flex-start, flex-start, column);
         @include u.media('tablet-medium') {
-            // @include u.flex(flex-end, flex-start);
             @include u.flex(flex-start, flex-end, column);
         };
     }
