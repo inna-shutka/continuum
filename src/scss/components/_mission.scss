@@ -4,6 +4,7 @@
 .mission {
     position: relative;
     background-color: v.$color-bg-main;
+    width: 100%;
     max-width: 1366px;
     padding: 64px 16px 0px 16px;
     @include u.media('tablet-wide') {
@@ -150,7 +151,7 @@
         @include u.media('tablet-wide') {
             position: absolute;
             width: 590px;
-            height: 530px;
+            height: 540px;
             right: 0px;
         }
         @include u.media('desktop') {

@@ -3,6 +3,7 @@
 
 .itworks {
     position: relative;
+    width: 100%;
     max-width: 1366px;
     padding: 171px 16px 0px 16px;
     @include u.flex(flex-start, flex-start, column);

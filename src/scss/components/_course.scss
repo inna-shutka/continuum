@@ -2,6 +2,7 @@
 @use '../config/variables' as v;
 
 .course {
+    width: 100%;
     max-width: 1366px;
     padding: 190px 16px 0px 16px;
     @include u.flex(center, center, column);
