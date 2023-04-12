@@ -4,9 +4,8 @@
 .features {
     width: 100%;
     background-color: v.$color-white-2;
-    padding: 64px 16px 28px 16px;
+    padding: 64px 0px 28px 0px;
     @include u.flex(center,center);
-    overflow: hidden;
         @include u.media('tablet-wide') {
             padding: 160px 64px 160px 64px;
         };
@@ -14,7 +13,6 @@
         width: 100%;
         max-width: 1366px;
         @include u.flex(flex-start, center, column);
-        overflow: hidden;
     }
     &__title {
         width: 100%;
