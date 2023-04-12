@@ -19,7 +19,6 @@
         outline: none;
         cursor: pointer;
         display: flex;
-        animation: fadein 0.5s;
     }
     &__close {
         width: 24px;
@@ -30,7 +29,6 @@
         outline: none;
         cursor: pointer;
         display: none;
-        animation: fadein 0.5s;
     }
 }
 
