@@ -13,4 +13,8 @@
     @include u.text(u.rem(16), 700, v.$color-white, 18px, v.$primary-font);
     text-align: center;
     cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+        color: v.$color-green;
+    }
 }

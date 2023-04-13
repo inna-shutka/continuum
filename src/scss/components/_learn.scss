@@ -164,9 +164,10 @@
         height: fit-content;
         background-color: v.$color-black-1;
         border-radius: 8px;
+        transition: all .3s ease;
         @include u.flex(flex-start, stretch);
         &:hover {
-            transform: scale(1.01);
+            transform: scale(1.02);
         }
     }
     &__avatar {

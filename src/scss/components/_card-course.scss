@@ -9,6 +9,7 @@
     border: 1px solid v.$color-grey;
     border-radius: 8px;
     cursor: pointer;
+    transition: all .3s ease;
     @include u.flex(flex-start, flex-start, column);
     @include u.media('phone-wide') {
         width: 344px;

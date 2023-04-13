@@ -76,6 +76,7 @@
         cursor: pointer;
         width: 100%;
         max-width: 246px;
+        transition: all .3s ease;
         @include u.text(u.rem(16), 400, v.$color-white-2, 115%, v.$primary-font);
         @include u.media('tablet-wide') {
             width: 246px;
@@ -115,6 +116,7 @@
         border: 1px solid v.$color-white-2;
         outline: none;
         @include u.text(u.rem(16), 400, v.$color-white-2, 115%, v.$primary-font);
+        transition: all .3s ease;
         &:first-of-type {
             margin-bottom: 16px;
         }
@@ -139,6 +141,7 @@
         gap: 24px;
     }
     &__media-link {
+        transition: all .3s ease;
         &:hover {
             transform: scale(1.2);
         }

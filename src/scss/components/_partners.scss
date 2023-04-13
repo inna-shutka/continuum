@@ -46,6 +46,7 @@
     &__img1 {
         width: 131px;
         height: 64px;
+        transition: all .3s ease;
         &:hover {
             transform: scale(1.2);
         }
@@ -53,6 +54,7 @@
     &__img2 {
         width: 140px;
         height: 60px;
+        transition: all .3s ease;
         @include u.media('tablet-wide') {
             width: 160px;
             height: 68px;
@@ -64,6 +66,7 @@
     &__img3 {
         width: 66px;
         height: 66px;
+        transition: all .3s ease;
         @include u.media('tablet-wide') {
             width: 77px;
             height: 77px;
@@ -75,6 +78,7 @@
     &__img4 {
         width: 139px;
         height: 25px;
+        transition: all .3s ease;
         @include u.media('tablet-wide') {
             width: 189px;
             height: 34px;
@@ -86,6 +90,7 @@
     &__img5 {
         width: 118px;
         height: 46px;
+        transition: all .3s ease;
         @include u.media('tablet-wide') {
             width: 152px;
             height: 58px;
@@ -97,6 +102,7 @@
     &__img6 {
         width: 157px;
         height: 22px;
+        transition: all .3s ease;
         @include u.media('tablet-wide') {
             width: 193px;
             height: 27px;
@@ -108,6 +114,7 @@
     &__img7 {
         width: 151px;
         height: 26px;
+        transition: all .3s ease;
         @include u.media('tablet-wide') {
             width: 207px;
             height: 35px;
@@ -119,6 +126,7 @@
     &__img8 {
         width: 99px;
         height: 44px;
+        transition: all .3s ease;
         &:hover {
             transform: scale(1.2);
         }

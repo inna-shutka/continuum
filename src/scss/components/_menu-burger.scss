@@ -40,7 +40,10 @@
     background: v.$color-bg-main;
     @include u.flex(flex-start, flex-start, column);
     display: none;
-    animation: fadein 0.7s;
+    opacity: 0;
+    animation: fadein;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
     @include u.media('phone-wide') {
         padding: 24px 0px;
     };
@@ -76,6 +79,10 @@
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
