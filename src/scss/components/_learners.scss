@@ -4,11 +4,11 @@
 .learners {
     width: 100%;
     max-width: 1366px;
-    padding: 80px 16px 96px 16px;
+    padding: 80px 16px 216px 16px;
     overflow: hidden;
     @include u.flex(flex-start, center, column-reverse);
     @include u.media('tablet-wide') {
-        padding: 96px 64px 80px 64px;
+        padding: 96px 64px 242px 64px;
         @include u.flex(space-between, flex-start);
     };
     &__images {
@@ -55,8 +55,8 @@
         @include u.media('tablet-wide') {
             width: 180px;
             height: 214px;
-            bottom: -15%;
-            right: -20%;
+            bottom: -16%;
+            right: -24%;
         };
     }
     &__img-violet {

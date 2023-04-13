@@ -31,6 +31,17 @@
         width: 116px;
         height: 24px;
         cursor: pointer;
+        background-color: inherit;
+        border: none;
+        outline: none;
+        &:hover {
+            border: none;
+            outline: none;
+        }
+        &:focus {
+            border: none;
+            outline: none;
+        }
     }
     &__img {
         width: 116px;

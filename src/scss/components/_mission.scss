@@ -8,7 +8,7 @@
     max-width: 1366px;
     padding: 64px 16px 0px 16px;
     @include u.media('tablet-wide') {
-        padding: 160px 64px 80px 64px;
+        padding: 160px 64px 96px 64px;
     };
     &__title-wrapper {
         margin-bottom: 80px;
