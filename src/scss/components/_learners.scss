@@ -1,0 +1,112 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.learners {
+    width: 100%;
+    max-width: 1366px;
+    padding: 80px 16px 216px 16px;
+    overflow: hidden;
+    @include u.flex(flex-start, center, column-reverse);
+    @include u.media('tablet-wide') {
+        padding: 96px 64px 242px 64px;
+        @include u.flex(space-between, flex-start);
+    };
+    &__images {
+        position: relative;
+    }
+    &__image-blue {
+        position: absolute;
+        z-index: -1;
+        width: 108px;
+        height: 128px;
+        top: 0;
+        left: -120px;
+        @include u.media('tablet-wide') {
+            width: 180px;
+            height: 214px;
+            top: -12%;
+            left: -12%;
+        };
+    }
+    &__img-blue {
+        width: inherit;
+        height: inherit;
+    }
+    &__image-phone {
+        width: 230px;
+        height: 394px;
+        margin-top: 20px;
+        @include u.media('tablet-wide') {
+            width: 456px;
+            height: 780px;
+        };
+    }
+    &__img-phone {
+        width: inherit;
+        height: inherit;
+    }
+    &__image-violet {
+        position: absolute;
+        z-index: -1;
+        width: 90px;
+        height: 108px;
+        bottom: -40px;
+        right: -56px;
+        @include u.media('tablet-wide') {
+            width: 180px;
+            height: 214px;
+            bottom: -16%;
+            right: -24%;
+        };
+    }
+    &__img-violet {
+        width: inherit;
+        height: inherit;
+    }
+    &__info {
+        margin-top: 0px;
+        @include u.flex(flex-start, flex-start, column);
+        align-self: start;
+        @include u.media('tablet-wide') {
+            margin-top: 200px;
+        };
+    }
+    &__img-arrow {
+        display: none;
+        @include u.media('tablet-wide') {
+            display: block;
+            width: 102px;
+            height: 92px;
+            margin-bottom: 40px;
+        };
+    }
+    &__title {
+        margin-bottom: 32px;
+        @include u.media('tablet-wide') {
+            margin-bottom: 40px;
+        };
+    }
+    &__text-one, &__text-two {
+        width: 100%;
+        max-width: 400px;
+        @include u.text(u.rem(20), 400, v.$color-white-2, 150%, v.$primary-font);
+        @include u.media('tablet-wide') {
+            @include u.text(u.rem(24), 400, v.$color-white-2, 150%, v.$primary-font);
+        };
+        @include u.media('desktop') {
+            max-width: 600px;
+        };
+    }
+    &__text-one {
+        margin-bottom: 16px;
+        @include u.media('tablet-wide') {
+            margin-bottom: 24px;
+        };
+    }
+    &__text-two {
+        margin-bottom: 40px;
+        @include u.media('tablet-wide') {
+            margin-bottom: 0px;
+        };
+    }
+}

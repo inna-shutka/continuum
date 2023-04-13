@@ -1,0 +1,9 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.subtitle {
+    @include u.text(u.rem(24), 400, v.$color-white-2, 150%, v.$primary-font);
+    @include u.media('tablet-wide') {
+        @include u.text(u.rem(48), 400, v.$color-white-2, 115%, v.$primary-font);
+    }
+}

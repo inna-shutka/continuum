@@ -1,0 +1,15 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.title {
+    @include u.text(u.rem(56), 700, v.$color-white-2, 115%, v.$primary-font);
+    @include u.media('tablet-wide') {
+        @include u.text(u.rem(100), 700, v.$color-white-2, 115%, v.$primary-font);
+    }
+    &--second {
+        @include u.text(u.rem(36), 700, v.$color-white-2, 115%, v.$primary-font);
+    @include u.media('tablet-wide') {
+        @include u.text(u.rem(56), 700, v.$color-white-2, 115%, v.$primary-font);
+    }
+    }
+}

@@ -1,0 +1,25 @@
+@use './config/normalize';
+@use './config/reset';
+@use './config/common';
+
+@use './components/header';
+@use './components/button';
+@use './components/menu-burger';
+@use './components/hero';
+@use './components/title';
+@use './components/subtitle';
+@use './components/course';
+@use './components/card-course';
+@use './components/course-slider';
+@use './components/partners';
+@use './components/itworks';
+@use './components/learn';
+@use './components/use';
+@use './components/features';
+@use './components/features-slider';
+@use './components/mission';
+@use './components/learners';
+@use './components/footer';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

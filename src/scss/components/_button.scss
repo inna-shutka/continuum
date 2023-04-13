@@ -1,0 +1,20 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.button {
+    width: 77px;
+    height: 42px;
+    background: inherit;
+    border: none;
+    outline: none;
+    color: v.$color-white-2;
+    padding: 12px;
+    @include u.flex(center, center);
+    @include u.text(u.rem(16), 700, v.$color-white, 18px, v.$primary-font);
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+        color: v.$color-green;
+    }
+}

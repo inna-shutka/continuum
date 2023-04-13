@@ -4,10 +4,613 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Continuum</title>
     <link rel="stylesheet" href="./scss/style.scss">
 </head>
 <body>
+    <header class="header container">
+        <div class="header__wrapper">
+            <a class="header__logo logo" href="#">
+                <img class="header__img logo__img" src="./assets/svg/logo-header.svg" alt="Continuum">
+            </a>
+            <button class="header__button button">Sign in</button>
+        </div>
+        <div class="header__menu menu" id="menu-container">
+            <button class="menu__burger" id="menu-burger">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 18H22M2 12H22M2 6H22" stroke="#F4EEEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="menu__close" id="menu-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 6.70711C19.0976 6.31658 19.0976 5.68342 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929C4.90237 17.6834 4.90237 18.3166 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711Z" fill="#F4EEEA"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header__card menu-card" id="menu-card">
+            <div class="menu-card__item"><a class="menu-card__link" href="#">About</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Courses</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Leaderboard</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Whitepaper</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Blog</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Privacy Policy</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Terms of Use</a></div>
+            <div class="menu-card__item"><a class="menu-card__link" href="#">Contact Support</a></div>
+            <div class="menu-card__media">
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-facebook-menu.svg" alt="Facebook">
+                </a>
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-instagram-menu.svg" alt="Instagram">
+                </a>
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-linkedin-menu.svg" alt="Linkedin">
+                </a>
+                <a class="menu-card__media-link" href="#">
+                    <img src="./assets/svg/icon-pinterest-menu.svg" alt="Pinterest">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <div class="hero__wrapper">
+            <h1 class="hero__title title">Get paid to learn.</h1>
+            <h2 class="hero__subtitle subtitle">Short-form video and carousel content that earns rewards and NFTs.</h2>
+        </div>
+        <div class="hero__images">
+            <img class="hero__main-img" src="/src/assets/svg/hero-main.svg" alt="image-card">
+            <img class="hero__gray-coin" src="/src/assets/images/gray-coin.png" alt="image-gray-coin">
+            <img class="hero__greencoin-mb" src="/src/assets/images/green-coin-mobile.png" alt="image-green-coin-mobile">
+            <img class="hero__green-coin" src="/src/assets/images/green-coin.png" alt="image-green-coin">
+        </div>
+    </section>
+
+    <section class="course container">
+        <h3 class="course__title title--second">Take a course in ⤵️</h3>
+        <div class="course__wrapper">
+            <div id="slide1" class="course__card card-course">
+                <div class="card-course__image">
+                    <img class="card-course__img" src="/src/assets/images/card-course-1.png" alt="course-img">
+                </div>
+                <div class="card-course__subtitle">
+                    <p class="card-course__lessons">2 lessons</p>
+                    <p class="card-course__minutes">6 min</p>
+                </div>
+                <h4 class="card-course__title">ABCsof DAOs</h4>
+                <div class="card-course__info">
+                    <p class="card-course__rewards">Rewards:</p>
+                    <span class="card-course__divider"></span>
+                    <span class="card-course__nft-info">
+                        <span  class="card-course__nft">NFT</span>
+                        <span class="card-course__quantity">1</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">Gems</span>
+                        <span class="card-course__quantity">200</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">XP</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                </div>
+            </div>
+            <div id="slide2" class="course__card card-course">
+                <div class="card-course__image">
+                    <img class="card-course__img" src="/src/assets/images/card-course-2.png" alt="course-img">
+                </div>
+                <div class="card-course__subtitle">
+                    <p class="card-course__lessons">3 lessons</p>
+                    <p class="card-course__minutes">9 min</p>
+                </div>
+                <h4 class="card-course__title">Crypto Wallet Basics</h4>
+                <div class="card-course__info">
+                    <p class="card-course__rewards">Rewards:</p>
+                    <span class="card-course__divider"></span>
+                    <span class="card-course__nft-info">
+                        <span  class="card-course__nft">NFT</span>
+                        <span class="card-course__quantity">1</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">Gems</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">XP</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                </div>
+            </div>
+            <div id="slide3" class="course__card card-course">
+                <div class="card-course__image">
+                    <img class="card-course__img" src="/src/assets/images/card-course-3.png" alt="course-img">
+                </div>
+                <div class="card-course__subtitle">
+                    <p class="card-course__lessons">3 lessons</p>
+                    <p class="card-course__minutes">9 min</p>
+                </div>
+                <h4 class="card-course__title">Why Freelance?</h4>
+                <div class="card-course__info">
+                    <p class="card-course__rewards">Rewards:</p>
+                    <span class="card-course__divider"></span>
+                    <span class="card-course__nft-info">
+                        <span  class="card-course__nft">NFT</span>
+                        <span class="card-course__quantity">1</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">Gems</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">XP</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                </div>
+            </div>
+            <div id="slide4" class="course__card card-course">
+                <div class="card-course__image">
+                    <img class="card-course__img" src="/src/assets/images/card-course-4.png" alt="course-img">
+                </div>
+                <div class="card-course__subtitle">
+                    <p class="card-course__lessons">2 lessons</p>
+                    <p class="card-course__minutes">6 min</p>
+                </div>
+                <h4 class="card-course__title">Crypto Credit Cards 101</h4>
+                <div class="card-course__info">
+                    <p class="card-course__rewards">Rewards:</p>
+                    <span class="card-course__divider"></span>
+                    <span class="card-course__nft-info">
+                        <span  class="card-course__nft">NFT</span>
+                        <span class="card-course__quantity">1</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">Gems</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">XP</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                </div>
+            </div>
+            <div id="slide5" class="course__card card-course">
+                <div class="card-course__image">
+                    <img class="card-course__img" src="/src/assets/images/card-course-5.png" alt="course-img">
+                </div>
+                <div class="card-course__subtitle">
+                    <p class="card-course__lessons">3 lessons</p>
+                    <p class="card-course__minutes">9 min</p>
+                </div>
+                <h4 class="card-course__title">NFTs in a Nutshell</h4>
+                <div class="card-course__info">
+                    <p class="card-course__rewards">Rewards:</p>
+                    <span class="card-course__divider"></span>
+                    <span class="card-course__nft-info">
+                        <span  class="card-course__nft">NFT</span>
+                        <span class="card-course__quantity">1</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">Gems</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">XP</span>
+                        <span class="card-course__quantity">300</span>
+                    </span>
+                </div>
+            </div>
+            <div id="slide6" class="course__card card-course">
+                <div class="card-course__image">
+                    <img class="card-course__img" src="/src/assets/images/card-course-6.png" alt="course-img">
+                </div>
+                <div class="card-course__subtitle">
+                    <p class="card-course__lessons">2 lessons</p>
+                    <p class="card-course__minutes">6 min</p>
+                </div>
+                <h4 class="card-course__title">Learn to Earn in Web3</h4>
+                <div class="card-course__info">
+                    <p class="card-course__rewards">Rewards:</p>
+                    <span class="card-course__divider"></span>
+                    <span class="card-course__nft-info">
+                        <span  class="card-course__nft">NFT</span>
+                        <span class="card-course__quantity">1</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">Gems</span>
+                        <span class="card-course__quantity">200</span>
+                    </span>
+                    <span class="card-course__nft-info">
+                        <span class="card-course__nft">XP</span>
+                        <span class="card-course__quantity">200</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="course__slider first-current">
+            <div id="dot1" class="course__dot"></div>
+            <div id="dot2" class="course__dot"></div>
+            <div id="dot3" class="course__dot"></div>
+            <div id="dot4" class="course__dot"></div>
+            <div id="dot5" class="course__dot"></div>
+            <div id="dot6" class="course__dot"></div>
+        </div>
+    </section>
+
+    <section class="partners container">
+        <h3 class="partners__title title title--second">Our partners</h3>
+        <div class="partners__wrapper">
+            <div class="partners__item">
+                <img class="partners__img1" src="/src/assets/svg/partners-icon1.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item">
+                <img class="partners__img2" src="/src/assets/svg/partners-icon2.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item">
+                <img class="partners__img3" src="/src/assets/svg/partners-icon3.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item">
+                <img class="partners__img4" src="/src/assets/svg/partners-icon4.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item">
+                <img class="partners__img5" src="/src/assets/svg/partners-icon5.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item">
+                <img class="partners__img6" src="/src/assets/svg/partners-icon6.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item">
+                <img class="partners__img7" src="/src/assets/svg/partners-icon7.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item">
+                <img class="partners__img8" src="/src/assets/svg/partners-icon8.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img1" src="/src/assets/svg/partners-icon1.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img2" src="/src/assets/svg/partners-icon2.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img3" src="/src/assets/svg/partners-icon3.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img4" src="/src/assets/svg/partners-icon4.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img5" src="/src/assets/svg/partners-icon5.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img6" src="/src/assets/svg/partners-icon6.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img7" src="/src/assets/svg/partners-icon7.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img8" src="/src/assets/svg/partners-icon8.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img1" src="/src/assets/svg/partners-icon1.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img2" src="/src/assets/svg/partners-icon2.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img3" src="/src/assets/svg/partners-icon3.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img4" src="/src/assets/svg/partners-icon4.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img5" src="/src/assets/svg/partners-icon5.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img6" src="/src/assets/svg/partners-icon6.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img7" src="/src/assets/svg/partners-icon7.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img8" src="/src/assets/svg/partners-icon8.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img1" src="/src/assets/svg/partners-icon1.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img2" src="/src/assets/svg/partners-icon2.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img3" src="/src/assets/svg/partners-icon3.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img4" src="/src/assets/svg/partners-icon4.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img5" src="/src/assets/svg/partners-icon5.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img6" src="/src/assets/svg/partners-icon6.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img7" src="/src/assets/svg/partners-icon7.svg" alt="icon-partners">
+            </div>
+            <div class="partners__item item--add">
+                <img class="partners__img8" src="/src/assets/svg/partners-icon8.svg" alt="icon-partners">
+            </div>
+        </div>
+    </section>
     
+    <section class="itworks container">
+        <h3 class="itworks__title title title--second">How it works</h3>
+        <div class="itworks__wrapper-info">
+            <div class="itworks__info">
+                <p class="itworks__text">Scroll through a curated feed of actionable shortform content to level up your skill set.</p>
+                <p class="itworks__text">As you take courses, post content, grow your knowledge, and engage in the community, you earn crypto and NFT rewards.</p>
+            </div>
+            <div class="itworks__image">
+                <img class="itworks__img" src="/src/assets/svg/itworks-img1.svg" alt="image">
+            </div>
+        </div>
+        <div class="itworks__icon">
+            <img class="itworks__icn" src="/src/assets/svg/itworks-img2.svg" alt="image">
+        </div>
+    </section>
+
+    <section class="learn container">
+        <div class="learn__wrapper">
+            <div class="learn__information">
+                <p class="learn__info">Think of your favorite social media app, but tailored <span class="learn__green">specifically</span> to help you learn whatever interests you.</p>
+                <p class="learn__info">And instead of paying to access the best educational resources, <span class="learn__green">you get paid</span>.</p>
+            </div>
+            <div class="learn__imageOne">
+                <img class="learn__imgOne" src="/src/assets/svg/learn-img1.svg" alt="image">
+            </div>
+            <div class="learn__imageTwo">
+                <img class="learn__imgTwo" src="/src/assets/svg/learn-img2.svg" alt="image">
+            </div>
+        </div>
+        <div class="learn__industry">
+            <div class="learn__title-wrapper">
+                <h3 class="learn__title title title--second">Learn from industry pros</h3>
+                <div class="learn__title-image">
+                    <img class="learn__title-img" src="/src/assets/svg/learn-img3.svg" alt="image">
+                </div>
+            </div>
+            <div class="learn__items-wrapper">
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img1.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Myriam Phung</h4>
+                        <p class="learn__person-text">Hello! I'm a french designer addicted to type, purple, and food.</p>
+                    </div>
+                </div>
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img2.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Jamey Gannon</h4>
+                        <p class="learn__person-text">Designer & co-founder of Continuum!</p>
+                    </div>
+                </div>
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img3.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Kezia Israel</h4>
+                        <p class="learn__person-text">Founder of Kizkopop, Simplifying messages for FinTech brands!</p>
+                    </div>
+                </div>
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img4.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Forough Jafari</h4>
+                        <p class="learn__person-text">UX Portfolio Tips & Resources</p>
+                    </div>
+                </div>
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img5.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Shyne Webster</h4>
+                        <p class="learn__person-text">Founder, brander, designer + mentor</p>
+                    </div>
+                </div>
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img6.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Sana Jeffery</h4>
+                        <p class="learn__person-text">Founder, brander, designer + mentor</p>
+                    </div>
+                </div>
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img7.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Dante DeDomenico</h4>
+                        <p class="learn__person-text">Digital marketing expert</p>
+                    </div>
+                </div>
+                <div class="learn__item">
+                    <div class="learn__avatar">
+                        <img class="learn__avt" src="/src/assets/images/learn-img8.png" alt="image">
+                    </div>
+                    <div class="learn__person">
+                        <h4 class="learn__person-name">Vadim Gricenko</h4>
+                        <p class="learn__person-text">UX/UI Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="use container">
+        <div class="use__image-wrapper">
+            <div class="use__coin-image">
+                <img class="use__coin-img" src="/src/assets/svg/use-img1.svg" alt="coin-image">
+            </div>
+            <div class="use__title-wrapper">
+                <h3 class="use__title title title--second">Why use Continuum</h3>
+                <div class="use__arrow-image">
+                    <img class="use__arrow-img" src="/src/assets/svg/use-img2.svg" alt="arrow-image">
+                </div>
+            </div>
+        </div>
+        <div class="use__info-block">
+            <div class="use__info-item">
+                <p class="use__info-title">Learn</p>
+                <p class="use__info">Discover educational content that's actually useful from the best creators and professionals across a wide range of topics.</p>
+            </div>
+            <div class="use__info-item">
+                <p class="use__info-title">Earn</p>
+                <p class="use__info">Knowledge and power. The tokens you earn from learning in-app allow access to opportunities for ownership and residual income over time.</p>
+            </div>
+            <div class="use__info-item">
+                <p class="use__info-title">Connect</p>
+                <p class="use__info">Join a global community of creatives, professionals, and hobbyists to learn alongside.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features container">
+        <div class="features__wrapper">
+            <h3 class="features__title title title--second">Continuum's Features</h3>
+            <div class="features__slider features-slider">
+                <div class="features-slider__slide">
+                    <div class="features-slider__image">
+                        <img class="features-slider__img" src="/src/assets/images/features-img1.png" alt="features image">
+                    </div>
+                    <p class="features-slider__subtitle">Contetnt</p>
+                    <div class="features-slider__icon">
+                        <img class="features-slider__icn" src="/src/assets/svg/features-arrow.svg" alt="arrow image">
+                    </div>
+                    <p class="features-slider__text">Free, actionable content on design, marketing, business, and more.</p>
+                </div>
+                <div class="features-slider__slide">
+                    <div class="features-slider__image">
+                        <img class="features-slider__img" src="/src/assets/images/features-img2.png" alt="features image">
+                    </div>
+                    <p class="features-slider__subtitle">Tools</p>
+                    <div class="features-slider__icon">
+                        <img class="features-slider__icn" src="/src/assets/svg/features-arrow.svg" alt="arrow image">
+                    </div>
+                    <p class="features-slider__text">Take quizes, notes, track your progress, and more.</p>
+                </div>
+                <div class="features-slider__slide">
+                    <div class="features-slider__image">
+                        <img class="features-slider__img" src="/src/assets/images/features-img3.png" alt="features image">
+                    </div>
+                    <p class="features-slider__subtitle">Community</p>
+                    <div class="features-slider__icon">
+                        <img class="features-slider__icn" src="/src/assets/svg/features-arrow.svg" alt="arrow image">
+                    </div>
+                    <p class="features-slider__text">Learn with fellow creatives; more than just a groupchat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission container">
+        <div class="mission__title-wrapper">
+            <h3 class="mission__title title title--second">Our Mission</h3>
+            <p class="mission__subtitle">Continuum's mission is to democratize education and create new pathways to financial freedom through the pixelated economy.</p>
+            <p class="mission__subtitle-green">Welcome to the future of income, work, and ownership.</p>
+        </div>
+        <div class="mission__info-wrapper">
+            <div class="mission__text-wrapper">
+                <h4 class="mission__title-second title title--second">For Creators</h4>
+                <p class="mission__text-one">Author actionable short-form content for your own audience of learners, followers and fans.</p>
+                <p class="mission__text-two">Partner with brands on our platform, and sell fractional ownership of your content as NFTs minted on our platform. Crowd fund, bring on investors or sell your content outright.</p>
+                <button class="mission__button">Apply to become a Creator</button>
+                <img class="mission__icon" src="/src/assets/svg/mission-arrow-img.svg" alt="arrow image">
+            </div>
+            <div class="mission__image">
+                <img class="mission__img" src="/src/assets/images/mission-image1.png" alt="image">
+            </div>
+        </div>
+        <button class="mission__button-mobile">Apply to become a Creator</button>
+    </section>
+
+    <section class="learners container">
+        <div class="learners__images">
+            <div class="learners__image-blue">
+                <img class="learners__img-blue" src="/src/assets/images/learners-image-blue.png" alt="image-stone">
+            </div>
+            <div class="learners__image-phone">
+                <img class="learners__img-phone" src="/src/assets/images/learners-image-phone.png" alt="image-phone">
+            </div>
+            <div class="learners__image-violet">
+                <img class="learners__img-violet" src="/src/assets/images/learners-image-violet.png" alt="image-stone">
+            </div>
+        </div>
+        <div class="learners__info">
+            <img class="learners__img-arrow" src="/src/assets/svg/learners-arrow-img.svg" alt="image-arrow">
+            <h3 class="learners__title title title--second">For Learners</h3>
+            <p class="learners__text-one">Get paid to scroll through a curated feed of actionable shortform content to level up your skill set.</p>
+            <p class="learners__text-two">Earn achievements and rewards, track your progress and receive NFT certificates of completion.</p>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <a class="footer__logo" href="#">
+            <img class="footer__logo-img" src="./assets/svg/logo-header.svg" alt="Continuum">
+        </a>
+        <div class="footer__wrapper">
+            <div class="footer__wrapper-links">
+                <p class="footer__wrapper-text">The first social education platform that allows you to earn as you learn.</p>
+                <div class="footer__menu">
+                    <ul class="footer__menu-wrapper">
+                        <li class="footer__menu-item">About</li>
+                        <li class="footer__menu-item">Whitepaper</li>
+                        <li class="footer__menu-item">Partnership</li>
+                        <li class="footer__menu-item">Blog</li>
+                        <li class="footer__menu-item">Ambassador Program</li>
+                    </ul>
+                    <ul class="footer__menu-wrapper">
+                        <li class="footer__menu-item">Leaderboard</li>
+                        <li class="footer__menu-item">Terms of Use</li>
+                        <li class="footer__menu-item">Privacy Policy</li>
+                        <li class="footer__menu-item">Careers</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__wrapper-media">
+                <p class="footer__media-title">Learn from industry pros</p>
+                <p class="footer__media-text">Download the app and get started🚀</p>
+                <button class="footer__button"> 
+                    <span class="footer__button-image"><img class="footer__button-img" src="/src/assets/svg/footer-apple-img.svg" alt="App Store"></span>
+                    <span>Download on App Store</span>
+                </button>
+                <button class="footer__button"> 
+                    <span class="footer__button-image"><img class="footer__button-img" src="/src/assets/svg/footer-google-img.svg" alt="Google Play"></span>
+                    <span class="footer__button-text">Download on Google Play</span>
+                </button>
+                <div class="footer__media">
+                    <a class="footer__media-link" href="">
+                        <img src="./assets/svg/icon-facebook-menu.svg" alt="Facebook">
+                    </a>
+                    <a class="footer__media-link" href="">
+                        <img src="./assets/svg/icon-instagram-menu.svg" alt="Instagram">
+                    </a>
+                    <a class="footer__media-link" href="">
+                        <img src="./assets/svg/icon-linkedin-menu.svg" alt="Linkedin">
+                    </a>
+                    <a class="footer__media-link" href="">
+                        <img src="./assets/svg/icon-pinterest-menu.svg" alt="Pinterest">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer__text">©️ 2023 Continuum</p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

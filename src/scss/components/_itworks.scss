@@ -1,0 +1,115 @@
+@use '../components/utils' as u;
+@use '../config/variables' as v;
+
+.itworks {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    padding: 171px 16px 0px 16px;
+    @include u.flex(flex-start, flex-start, column);
+    @include u.media('tablet-wide') {
+        padding: 160px 64px 0px 64px;
+    };
+    @include u.media('desktop') {
+        margin-bottom: -40px;
+    };
+    @include u.media('desktop-wide') {
+        margin-bottom: -170px;
+    };
+    &__title {
+        margin-bottom: 32px;
+        @include u.media('tablet-wide') {
+            
+            margin-bottom: 40px;
+        };
+    }
+    &__wrapper-info {
+        @include u.flex(flex-start, flex-start, column);
+        @include u.media('tablet-medium') {
+            @include u.flex(space-between, flex-start, row-reverse);
+        };
+    }
+    &__info {
+        width: 100%;
+        max-width: 736px;
+        @include u.flex(flex-start, flex-start, column);
+        margin-bottom: 56px;
+        @include u.media('tablet-medium') {
+            margin-bottom: 0px;
+        };
+        @include u.media('tablet-wide') {
+            max-width: 380px;
+        };
+        @include u.media('desktop-wide') {
+            max-width: 400px;
+        };
+    }
+    &__text {
+        @include u.text(u.rem(20), 400, v.$color-white-2, 150%, v.$primary-font);
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            @include u.media('tablet-wide') {
+                margin-bottom: 24px;
+            };
+        }
+    }
+    &__image {
+        @include u.flex(center, center);
+        width: 286px;
+        height: 294px;
+        margin-right: 0px;
+        @include u.media('tablet-medium') {
+            width: 330px;
+            height: 336px;
+            margin-right: 90px;
+        };
+        @include u.media('tablet-wide') {
+            width: 360px;
+            height: 358px;
+        };
+        @include u.media('desktop') {
+            width: 456px;
+            height: 403px;
+            margin-right: 140px;
+        };
+        @include u.media('desktop-wide') {
+            width: 554px;
+            height: 503px;
+            margin-right: 180px;
+        };
+    }
+    &__img {
+        width: inherit;
+        height: inherit;
+    }
+    &__icon {
+        display: none;
+        @include u.media('tablet-medium') {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            width: 92px;
+            height: 82px;
+            top: 470px;
+            left: 330px;
+        };
+        @include u.media('tablet-wide') {
+            width: 102px;
+            height: 92px;
+            top: 496px;
+            left: 400px;
+        };
+        @include u.media('desktop') {
+            top: 500px;
+            left: 540px;
+        };
+        @include u.media('desktop-wide') {
+            top: 460px;
+            left: 670px;
+        };
+    }
+    &__icn {
+        width: inherit;
+        height: inherit;
+    }
+}
